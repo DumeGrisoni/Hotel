@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useActionState } from 'react';
 import { format, isPast } from 'date-fns';
-import { fr } from 'date-fns/locale/fr';
+import fr from 'date-fns/locale/fr';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';

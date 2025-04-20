@@ -11,7 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 const UserBookings = ({
   user,
@@ -51,10 +51,10 @@ const UserBookings = ({
                   {booking.room.title}
                 </TableCell>
                 <TableCell className="font-medium text-center">
-                  {format(booking.checkIn, 'dd/MM/yyyy')}
+                  {format(parseISO(booking.checkIn), 'dd/MM/yyyy')}
                 </TableCell>
                 <TableCell className="font-medium text-center">
-                  {format(booking.checkOut, 'dd/MM/yyyy')}
+                  {format(parseISO(booking.checkOut), 'dd/MM/yyyy')}
                 </TableCell>
                 <TableCell className="text-right md:text-center">
                   {booking.price}

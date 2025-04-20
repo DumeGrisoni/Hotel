@@ -28,7 +28,6 @@ const AdminDashbord = async () => {
           <TabsTrigger value="tab1">Réservations</TabsTrigger>
           <TabsTrigger value="tab2">Chambres</TabsTrigger>
           <TabsTrigger value="tab3">Restaurant</TabsTrigger>
-          <TabsTrigger value="tab4">SPA</TabsTrigger>
         </TabsList>
         <div className="separator w-[95%] " />
         <TabsContent value="tab1" className="w-full">
@@ -40,7 +39,6 @@ const AdminDashbord = async () => {
         <TabsContent value="tab3" className="w-full">
           <AdminRestaurant />
         </TabsContent>
-        <TabsContent value="tab4">Content 4</TabsContent>
       </Tabs>
     </main>
   );

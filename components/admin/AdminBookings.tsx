@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { FaSearch } from 'react-icons/fa';
 
 // --------------- Import Internes ------------------------------
@@ -103,8 +103,10 @@ const AdminBookings = () => {
                   </TableCell>
                   <TableCell>{booking.name}</TableCell>
                   <TableCell className="flex flex-col items-center justify-center md:flex-row">
-                    <span>{format(booking.checkIn, 'dd/MM/yyyy')}</span>
-                    {format(booking.checkOut, 'dd/MM/yyyy')}
+                    <span>
+                      {format(parseISO(booking.checkIn), 'dd/MM/yyyy')}
+                    </span>
+                    {format(parseISO(booking.checkOut), 'dd/MM/yyyy')}
                   </TableCell>
                   <TableCell className="text-right md:text-center">
                     {booking.price}

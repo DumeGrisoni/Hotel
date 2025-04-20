@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import { getOneBooking } from '@/app/actions/bookingCrud';
 import AdminButton from '@/components/admin/AdminButton';
 import { Booking } from '@/types/bookingType';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 const BookingUpdate = () => {
   // --------------------- Hooks -----------------------------
@@ -90,13 +90,13 @@ const BookingUpdate = () => {
               <p className="text-primary font-semibold mb-2 text-start">
                 Entrée
               </p>
-              <p>{format(booking.checkIn, 'dd-MM-yyyy')}</p>
+              <p>{format(parseISO(booking.checkIn), 'dd-MM-yyyy')}</p>
             </div>
             <div className="mb-4">
               <p className="text-primary font-semibold mb-2 md:text-end">
                 Sortie
               </p>
-              <p>{format(booking.checkOut, 'dd-MM-yyyy')}</p>
+              <p>{format(parseISO(booking.checkOut), 'dd-MM-yyyy')}</p>
             </div>
           </div>
         </div>
